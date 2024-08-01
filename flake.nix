@@ -18,5 +18,12 @@
             packages = with pkgs; [ nil ];
           };
       };
+
+      flake = {
+        templates.machine-learning = {
+          path = ./machine-learning;
+          description = "Machine Learning environment based on Python and PyTorch.";
+        };
+      };
     };
 }

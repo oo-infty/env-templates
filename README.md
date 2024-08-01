@@ -1,5 +1,3 @@
 ## env-templates
 
-oo-infty's environment templates based on Nix Flake.
-
-
+Environment templates based on Nix Flake.
