@@ -18,16 +18,17 @@
       in {
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
-            python311Packages.python
-            python311Packages.torch-bin
-            python311Packages.torchvision-bin
-            python311Packages.numpy
-            python311Packages.pandas
-            python311Packages.matplotlib
-            python311Packages.pillow
-            python311Packages.opencv4
-            python311Packages.albumentations
-            python311Packages.tqdm
+            (python311.withPackages (python-pkgs: with python-pkgs; [
+              torch-bin
+              torchvision-bin
+              numpy
+              pandas
+              matplotlib
+              pillow
+              opencv4
+              albumentations
+              tqdm
+            ]))
 
             python311Packages.black
             pyright
