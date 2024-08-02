@@ -21,8 +21,13 @@
 
       flake = {
         templates.machine-learning = {
-          path = ./machine-learning;
+          path = ./templates/machine-learning;
           description = "Machine Learning environment based on Python and PyTorch.";
+        };
+
+        templates.rust-application = {
+          path = ./templates/rust-application;
+          description = "Rust application environment.";
         };
       };
     };
