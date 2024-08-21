@@ -20,6 +20,11 @@
       };
 
       flake = {
+        templates.cpp-environment = {
+          path = ./templates/cpp-environment;
+          description = "C++ environment with single source file";
+        };
+
         templates.machine-learning = {
           path = ./templates/machine-learning;
           description = "Machine Learning environment based on Python and PyTorch.";

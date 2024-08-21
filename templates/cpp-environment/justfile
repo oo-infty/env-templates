@@ -1,0 +1,14 @@
+CMAKE_BUILD_DIR := "build"
+TARGET := "cpp-out"
+
+default: build
+
+build:
+    @mkdir -p {{ CMAKE_BUILD_DIR }}
+    @cd {{ CMAKE_BUILD_DIR }} && cmake .. && make
+
+run: build
+    @./{{ CMAKE_BUILD_DIR }}/{{ TARGET }}
+
+clean:
+    @rm -rf {{ CMAKE_BUILD_DIR }}
